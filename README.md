@@ -6,3 +6,7 @@ Spring 2025
 - [Google Sheet for script testing](https://docs.google.com/spreadsheets/d/1Uxt-8pZ6vzg6PlAcBTOrV4rqpeXfcES8H2Hz8TCf1HY/edit?usp=sharing)
 - [Sheets API](https://developers.google.com/sheets/api/reference/rest)
 - [RCV](https://www.rcvresources.org/how-rcv-works)
+## Timeline
+**Week of 2/3** - Study RCV algorithm and Sheets API in preparation for writing JavaScript program\
+**Week of 2/10** - Begin writing JavaScript code in Sheets\
+**Week of 2/24** - Continue developing algorithm and make Python/Java program to generate toy data\
