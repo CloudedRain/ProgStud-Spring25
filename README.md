@@ -9,4 +9,9 @@ Spring 2025
 ## Timeline
 **Week of 2/3** - Study RCV algorithm and Sheets API in preparation for writing JavaScript program\
 **Week of 2/10** - Begin writing JavaScript code in Sheets\
-**Week of 2/24** - Continue developing algorithm and make Python/Java program to generate toy data\
+**Weeks of 2/24-3/3** - Continue developing algorithm and make Python/Java program to generate toy data\
+**Week of 3/10** - Design questionare to collect real-world data\
+**3/17-3/18 (2 classes)** - Send out my survey to begin receiving responses\
+**3/20-3/28 (7 classes)** - Polish JavaScript macro and test with toy data\
+**Week of 3/31** - Cut off data collection and start using my JavaScript macro on it\
+**Week of 4/7** - 
