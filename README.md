@@ -13,5 +13,5 @@ Spring 2025
 **Week of 3/10** - Design questionare to collect real-world data\
 **3/17-3/18 (2 classes)** - Send out my survey to begin receiving responses\
 **3/20-3/28 (7 classes)** - Polish JavaScript macro and test with toy data\
-**Week of 3/31** - Cut off data collection and start using my JavaScript macro on it\
-**Week of 4/7** - 
+**Week of 3/31** - Cut off data collection and start using my JavaScript macro\
+**Week of 4/7** - ...
