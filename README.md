@@ -50,12 +50,11 @@ function GenerateData() {
   for (let i = startRow; i <= rows + startRow; i++) {
     for (let j = startCol-1; j < cols + startCol-1; j++) {
       let cell = String.fromCharCode("A".charCodeAt(0) + j).concat(i);
-      console.log(cell);
       spreadsheet.getRange(cell).activate();
       spreadsheet.getCurrentCell().setValue('0');
     }
   }
-};
+}; 
 ```
 The macro is now able to automatically set the values of large chunks of the sheet.\
 []()
