@@ -20,9 +20,8 @@ Spring 2025
 - I started writing a JavaScript macro to generate test data
 
 ## Monday 2/24/25
-First day back from break.\
-```
-function GenerateData() {
+First day back from break.
+```function GenerateData() {
   const rows = 100;
   const cols = 3;
 
