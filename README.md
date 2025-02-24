@@ -18,3 +18,20 @@ Spring 2025
 ## Monday 2/10/25
 - [Applying Ranked Choice Voting](https://www.rankedvote.co/guides/applying-ranked-choice-voting/how-to-calculate-ranked-choice-voting-with-google-forms-and-google-sheets)
 - I started writing a JavaScript macro to generate test data
+
+## Monday 2/24/25
+First day back from break.\
+```
+function GenerateData() {
+  const rows = 100;
+  const cols = 3;
+
+  var spreadsheet = SpreadsheetApp.getActive();
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < cols; j++) {
+      currentCol = String.fromCharCode("A".charCodeAt(0) + j)
+      spreadsheet.getRange('' + currentCol + String.fromCharCode(i)).activate();
+      spreadsheet.getCurrentCell().setValue('0');
+    }
+  }
+};```
