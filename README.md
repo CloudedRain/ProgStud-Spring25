@@ -59,3 +59,16 @@ function GenerateData() {
 The macro is now able to automatically set the values of large chunks of the sheet.\
 []()
 
+## Tuesday 2/25/25
+Found an example of a Durstenfeld shuffle algorithm for JavaScript on stack overflow.
+```
+/* Randomize array in-place using Durstenfeld shuffle algorithm */
+function shuffleArray(array) {
+    for (var i = array.length - 1; i >= 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+```
