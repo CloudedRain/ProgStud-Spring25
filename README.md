@@ -95,3 +95,4 @@ function GenerateData() {
   }
 };
 ```
+[Toy Data Sheet](https://github.com/CloudedRain/ProgStud-Spring25/blob/main/Journal%20Images/5x5-data-rcv.png)
