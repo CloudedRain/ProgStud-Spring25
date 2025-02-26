@@ -7,13 +7,13 @@ Spring 2025
 - [Sheets API](https://developers.google.com/sheets/api/reference/rest)
 - [RCV](https://www.rcvresources.org/how-rcv-works)
 ## Timeline
-**Week of 2/10** -  Study RCV algorithm and Sheets API while writing macro to generate test data\
-**Weeks of 2/24-3/3** - Begin writing JavaScript code in Sheets\
-**Week of 3/10** - Design questionare to collect real-world data\
-**3/17-3/18 (2 classes)** - Send out my survey to begin receiving responses\
-**3/20-3/28 (7 classes)** - Polish JavaScript macro and test with toy data\
-**Week of 3/31** - Cut off data collection and start using my JavaScript macro\
-**Week of 4/7** - 
+**Week of 2/10** -  Study RCV algorithm and Sheets API\
+**Weeks of 2/24-3/3** - Familiarize myself with JavaScript whist developing data generation macro\
+**Week of 3/10** - Start making the RCV algorithm, automating the process in google sheets\
+**3/17-3/18 (2 classes)** - Design questionare to collect real-world data\
+**3/20-3/21 (2 classes)** - Send out my survey to begin receiving responses\
+**3/24-4/2 (8 classes)** - Polish JavaScript macro and add faulty-data handling\
+**Week of 4/7** - Cut off data collection and start using my JavaScript macro\
 
 ## Monday 2/10/25
 - [Applying Ranked Choice Voting](https://www.rankedvote.co/guides/applying-ranked-choice-voting/how-to-calculate-ranked-choice-voting-with-google-forms-and-google-sheets)
