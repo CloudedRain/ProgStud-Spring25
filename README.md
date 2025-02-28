@@ -100,5 +100,5 @@ function GenerateData() {
 ## Friday 2/28/25
 I met with Ms. Po and she really liked my project!\
 She will be talking about it on a radio show featuring pojects at Baxter.\
-Her request to me is clear data about the difference between ranked-choice and majority vote.
+Her request to me is clear data about the difference in result between ranked-choice and majority vote.
 I also would like to turn my JavaScript macro into some sort of template for easy replication and distribution.
