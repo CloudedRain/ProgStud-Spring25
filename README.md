@@ -105,4 +105,4 @@ I also would like to turn my JavaScript macro into some sort of template for eas
 
 ## Monday 3/3/25
 Today I emailed Ms. Po about RCV voting, providing her with one of my resources on it and giving a brief explanation in my own words.\
-I hope that this will allow her to have a much clearer understanding of my project when she talks about it on Maine Calling.\
+I hope that this will allow her to have a much clearer understanding of my project when she talks about it on Maine Calling.
