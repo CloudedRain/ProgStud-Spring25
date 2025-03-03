@@ -106,3 +106,42 @@ I also would like to turn my JavaScript macro into some sort of template for eas
 ## Monday 3/3/25
 Today I emailed Ms. Po about RCV voting, providing her with one of my resources on it and giving a brief explanation in my own words.\
 I hope that this will allow her to have a much clearer understanding of my project when she talks about it on Maine Calling.
+**10:50 AM** As a first step in the algorithm, I wrote a messy function to run though the data and count\
+the number of 1st choices. This is pretty unoptimised, but progress nonetheless.
+```
+function rcvAlgorithm() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  const rows = 100;
+  const cols = 5;
+  const startRow = 2;
+  const startCol = 1;
+  var votes = [];
+  for (let i = 0; i < cols; i++) {
+    votes[i] = 0;
+  }
+  var choice;
+
+  for (let i = startRow; i <= rows + startRow + 1; i++) {
+    for (let j = 0; j < cols; j++) {
+      column = j + startCol-1;
+      let cell = String.fromCharCode("A".charCodeAt(0) + column).concat(i);
+      spreadsheet.getRange(cell).activate();
+      if (i == rows + startRow + 1) {
+        spreadsheet.getCurrentCell().setValue(votes[j]);
+      }
+      else {
+        choice = spreadsheet.getCurrentCell().getValue();
+        console.log(choice);
+        if (choice == 1) {
+          votes[j] ++;
+          console.log(votes[j]);
+        }
+      }
+    }
+  }
+
+  spreadsheet.getRange('F2').activate();
+  spreadsheet.getCurrentCell().setValue();
+};
+```
+![First Choice Results](https://github.com/CloudedRain/ProgStud-Spring25/blob/main/Journal%20Images/first-choice-results.png)
