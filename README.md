@@ -102,3 +102,7 @@ I met with Ms. Po and she really liked my project!\
 She will be talking about it on a radio show featuring pojects at Baxter.\
 Her request to me is clear data about the difference in result between ranked-choice and majority vote.\
 I also would like to turn my JavaScript macro into some sort of template for easy replication and distribution.
+
+## Monday 3/3/25
+Today I emailed Ms. Po about RCV voting, providing her with one of my resources on it and giving a brief explanation in my own words.\
+I hope that this will allow her to have a much clearer understanding of my project when she talks about it on Maine Calling.\
