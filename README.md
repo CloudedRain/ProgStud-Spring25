@@ -7,9 +7,9 @@ Spring 2025
 - [Sheets API](https://developers.google.com/sheets/api/reference/rest)
 - [RCV](https://www.rcvresources.org/how-rcv-works)
 ## Timeline
-**Week of 2/10** -  Study RCV algorithm and Sheets API\
-**Weeks of 2/24-3/3** - Familiarize myself with JavaScript whist developing data generation macro\
-**Week of 3/10** - Start writing RCV function, looping though all the data and performing actions\
+**Week of 2/10** -  Study RCV algorithm and Sheets API ✔️\
+**Weeks of 2/24-3/3** - Familiarize myself with JavaScript whist developing data generation macro ✔️\
+**Week of 3/10** - Start writing RCV function, looping though all the data and performing actions ✔️\
 **Week of 3/17** - Add RCV functionality, performing instant run off and outputting clear information\
 **3/24-3/25 (2 classes)** - Design questionare to collect real-world data\
 **3/26-3/27 (2 classes)** - Send out my survey to begin receiving responses\
