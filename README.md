@@ -169,3 +169,4 @@ I have optimised my functions so that they directly pull values from the spreads
   }
 };
 ```
+**To do:** Allow the program to detect the start row and column. Tally up non-first choices to apply RCV.
