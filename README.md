@@ -147,3 +147,25 @@ function rcvAlgorithm() {
 };
 ```
 ![First Choice Results](https://github.com/CloudedRain/ProgStud-Spring25/blob/main/Journal%20Images/first-choice-results.png)
+
+## Monday 3/10/25
+I have optimised my functions so that they directly pull values from the spreadsheet instead of having to activate each box.
+```
+  for (let i = startCol; i < cols + startCol; i++) { 
+    votes[i] = 0;
+  }
+
+  for (let i = startRow; i <= rows + startRow + 1; i++) {
+    for (let j = startCol; j < cols + startCol; j++) {
+      if (i == rows + startRow + 1) {
+        spreadsheet.getRange(cellID(j, i)).setValue(votes[j]);
+      }
+      else {
+        console.log(j + ", " + cellID(j, i));
+        choice = spreadsheet.getRange(cellID(j, i)).getValue();
+        votes[j] += (choice == 1) ? 1 : 0;
+      }
+    }
+  }
+};
+```
