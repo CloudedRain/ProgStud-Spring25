@@ -162,7 +162,7 @@ I have optimised my functions so that they directly pull values from the spreads
       }
       else {
         console.log(j + ", " + cellID(j, i));
-        choice = spreadsheet.getRange(cellID(j, i)).getValue();
+        choice = spreadsheet.getRange(cellID(j, i)).getValue(); // Instant getter
         votes[j] += (choice == 1) ? 1 : 0;
       }
     }
