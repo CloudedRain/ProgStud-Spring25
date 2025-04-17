@@ -9,13 +9,15 @@ Spring 2025
 ## Timeline
 **Week of 2/10** -  Study RCV algorithm and Sheets API ✔️\
 **Weeks of 2/24-3/3** - Familiarize myself with JavaScript whist developing data generation macro ✔️\
-**Week of 3/10** - Start writing RCV function, looping though all the data and performing actions ✔️\
-**Week of 3/17** - Add RCV functionality, performing instant run off and outputting clear information\
-**3/24-3/25 (2 classes)** - Design questionare to collect real-world data\
-**3/26-3/27 (2 classes)** - Send out my survey to begin receiving responses\
-**3/31-4/11 (7 classes)** - Polish JavaScript macro and add faulty-data handling\
-**Week of 4/7** - Cut off data collection and start using my JavaScript macro\
-**Future Additions** - Public data findings, package program into something others can use
+**Week of 3/10** - Begin the RCV algorithm, having it start by tallying up first choice votes ✔️\
+**Week of 4/7** - Optimise algorithm by pulling data directly into an array and performing array-based calculations ✔️\
+**Week of 4/21 (April Break)** - Catch up on lost time and finally add ranked choice functionality to algorithm\
+**4/28-4/29 (2 classes)** - Design questionare to collect real-world data\
+**4/30-5/1 (2 classes)** - Release my survey to begin receiving responses\
+**Week of 5/5** - Add start/end detection for rows and columns while data trickles in\
+**Week of 5/12** - Polish RCV macro and add faulty-data handling\
+**5/21-5/22 (2 classes)** - Cut off data collection and start using my JavaScript macro\
+**5/27-5/29 (3 classes)** - Compile and publish data findings
 
 ## Monday 2/10/25
 - [Applying Ranked Choice Voting](https://www.rankedvote.co/guides/applying-ranked-choice-voting/how-to-calculate-ranked-choice-voting-with-google-forms-and-google-sheets)
@@ -148,7 +150,7 @@ function rcvAlgorithm() {
 ```
 ![First Choice Results](https://github.com/CloudedRain/ProgStud-Spring25/blob/main/Journal%20Images/first-choice-results.png)
 
-## Monday 3/10/25
+## Tuesday 4/8/25
 I have optimised my functions so that they directly pull values from the spreadsheet instead of having to activate each box.
 ```
   for (let i = startCol; i < cols + startCol; i++) { 
