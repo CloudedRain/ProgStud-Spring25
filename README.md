@@ -12,7 +12,7 @@ Spring 2025
 **Week of 3/10** - Begin the RCV algorithm, having it start by tallying up first choice votes ✔️\
 \
 **Week of 4/7** - Optimise algorithm by pulling data directly into an array and performing array-based calculations ✔️\
-**Week of 4/21 (April Break)** - Catch up on lost time and finally add ranked choice functionality to algorithm\
+**Week of 4/21 (April Break)** - Catch up on lost time and finally add ranked choice functionality to algorithm ✔️\
 \
 **4/28-4/29 (2 classes)** - Design questionare to collect real-world data\
 **4/30-5/1 (2 classes)** - Release my survey to begin receiving responses\
