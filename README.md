@@ -210,5 +210,5 @@ for (let i = 1; i <= cols; i++) {
   data.push(i);
 }
 ```
-↓\
+Instead use Array.from for a single line.\
 `let data = Array.from({ length: cols }, (_, i) => i + 1); // cols = 5 -> [1, 2, 3, 4, 5]`
