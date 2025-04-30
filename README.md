@@ -220,4 +220,4 @@ Instead use Array.from for a single line.\
 \
 Before automating the Ranked Choice winner calculation, I can do it by hand on some specific data to see what I get.\
 The first step is to add up all the first choices. I did this by replacing all the other numbers (besides 1) with something unique to each other that isn't a number.
-![Step 1](https://github.com/CloudedRain/ProgStud-Spring25/blob/main/Journal%20Images/5x5-data-rcv.png)
+![Step 1](https://github.com/CloudedRain/ProgStud-Spring25/blob/main/Journal%20Images/calculate_winner_step1.png)
