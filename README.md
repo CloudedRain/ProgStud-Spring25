@@ -176,3 +176,30 @@ I have optimised my functions so that they directly pull values from the spreads
 };
 ```
 **To do:** Allow the program to detect the start row and column. Tally up non-first choices to apply RCV.
+## Spring Break 4/19-4/27
+Added a dictionary of helper functions to the beginning of my JS file.
+```
+const utils = {
+  // Helper function for converting indices to A1 notation
+  cellID: function(colIndex, row) {
+    let letter = '';
+    while (colIndex >= 0) { // Handler for > 26 columns
+      letter = String.fromCharCode((colIndex % 26) + 65) + letter;
+      colIndex = Math.floor(colIndex / 26) - 1;
+    }
+    return `${letter}${row}`;
+  },
+
+  // Helper function for shuffling arrays
+  // Uses a sort of 'reverse bubble sort' algorithm which makes random swaps
+  shuffleArray: function(array) {
+    for (let i = array.length - 1; i >= 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      // Swap selected numbers
+      let temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+  }
+};
+```
