@@ -204,7 +204,9 @@ const utils = {
 };
 ```
 Learned how to shorten this for loop:
-`placeholder`
-|
-V
+`  for (let i = 1; i <= cols; i++) {
+     data.push(i);
+   }`
+|\
+V\
 `let data = Array.from({ length: cols }, (_, i) => i + 1); // cols = 5 -> [1, 2, 3, 4, 5]`
