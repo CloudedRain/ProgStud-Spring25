@@ -203,7 +203,7 @@ const utils = {
   }
 };
 ```
---
+--\
 Learned how to shorten this for loop:
 ```
 let data = [];
