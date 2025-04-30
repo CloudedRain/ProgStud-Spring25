@@ -177,7 +177,7 @@ I have optimised my functions so that they directly pull values from the spreads
 ```
 **To do:** Allow the program to detect the start row and column. Tally up non-first choices to apply RCV.
 ## Spring Break 4/19-4/27
-Added a dictionary of helper functions to the beginning of my JS file.
+Added a dictionary of helper functions to the beginning of my JS file. This allowed me to remove the functions from top-level scope and hide them from Apps Script.
 ```
 const utils = {
   // Helper function for converting indices to A1 notation
