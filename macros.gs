@@ -75,7 +75,7 @@ function CalculateWinner() {
 
     console.log(`Round ${round++}:`);
     activeCandidates.forEach(i => {
-      console.log(`Candidate ${i + 1}: ${votes[i]} vote(s)`);
+      console.log(`Candidate ${i + 1}: ${votes[i]} votes`);
     });
 
     // Check for majority
@@ -98,11 +98,12 @@ function CalculateWinner() {
 
     // Eliminate all candidates with the fewest votes
     activeCandidates = activeCandidates.filter(i => !lowestCandidates.includes(i));
-    console.log(`Eliminating candidates ${lowestCandidates.map(i => i + 1).join(", ")} with ${minVotes} vote(s)\n`);
+    console.log(`Eliminating candidates ${lowestCandidates.map(i => i + 1).join(", ")} with ${minVotes} votes\n`);
   }
 
   // If this line is reached, only one candidate remains
   console.log(`Candidate ${activeCandidates[0] + 1} wins by default.`);
+  // TODO: Add an output system to the google sheet - results are not currently visible
 };
 
 function GenerateData() {
