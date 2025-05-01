@@ -318,4 +318,5 @@ Improved my range detection system and made it sort of "smart" by adding a filte
   const voteData = allData.slice(1).map(row => row.slice(startCol, startCol + cols));
   const rows = voteData.length;
 ```
-Here you can see I make sure the data is larger than 1 so that there's something to calculate. Then I search for the first column that starts with neither a blank cell or the string "Timestamp" (google forms generates this column when exporting to a spreadsheet).
+Here you can see I make sure the data is larger than 1 so that there's something to calculate. Then I search for the first column that starts with neither a blank cell or the string "Timestamp" (google forms generates this column when exporting to a spreadsheet).\
+The next step to improve this would be doing the same thing for the end column where I make sure there's no blank columns in between, which would tell me that I'm including one or more columns which contain zero data. An alternative method is checking which columns have 0 votes after tallying up the first round, but these dead columns are already taking out in bulk by the group elimination system for all candidates of the same lowest votes.
