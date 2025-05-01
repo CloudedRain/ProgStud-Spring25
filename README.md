@@ -320,3 +320,8 @@ Improved my range detection system and made it sort of "smart" by adding a filte
 ```
 Here you can see I make sure the data is larger than 1 so that there's something to calculate. Then I search for the first column that starts with neither a blank cell or the string "Timestamp" (google forms generates this column when exporting to a spreadsheet).\
 The next step to improve this would be doing the same thing for the end column where I make sure there's no blank columns in between, which would tell me that I'm including one or more columns which contain zero data. An alternative method is checking which columns have 0 votes after tallying up the first round, but these dead columns are already taking out in bulk by the group elimination system for all candidates of the same lowest votes.
+## Third Check-In
+- SUMIF and other functions can be inserted by my JavaScript function to give helpful output and display
+- Throughtly test algorithm to make sure it is redistributing votes and comparing a candidates current votes with the initial maximum
+- Improve data range detection to check for continuous blocks of data: have thourough algorithms for finding start/end row/column
+- Share my survey ASAP to let it collect votes while I make progress
