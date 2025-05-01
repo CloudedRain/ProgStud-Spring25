@@ -218,7 +218,51 @@ Instead use Array.from for a single line.\
 \
 --\
 \
-Before automating the Ranked Choice winner calculation, I can do it by hand on some specific data to see what I get.\
-The first step is to add up all the first choices. I did this by replacing all the other numbers (besides 1) with something unique to each other that isn't a number.\
-![Step 1](https://github.com/CloudedRain/ProgStud-Spring25/blob/main/Journal%20Images/calculate_winner_step1.png)\
-Once only the first choices are actual numbers, you can sum the columns together and put the result at the bottom. This will show you who has the most votes initially. But, if no candidiate has the majority, we need to start the instant runoff.
+### Finally inditroduced instant runoff functionality!
+```
+  while (activeCandidates.length > 1) {
+    let votes = Array(cols).fill(0);
+    let totalVotes = 0;
+
+    // Tally first-choice votes for active candidates
+    for (let r = 0; r < rows; r++) {
+      const row = voteData[r];
+      const choiceIndex = utils.firstActiveChoice(row, activeCandidates);
+      if (choiceIndex !== -1) {
+        votes[choiceIndex]++;
+        totalVotes++;
+      }
+    }
+
+    console.log(`Round ${round++}:`);
+    activeCandidates.forEach(i => {
+      console.log(`Candidate ${i + 1}: ${votes[i]} vote(s)`);
+    });
+
+    // Check for majority
+    for (let i of activeCandidates) {
+      if (votes[i] > totalVotes / 2) {
+        console.log(`Candidate ${i + 1} wins with majority (${votes[i]}/${totalVotes})`);
+        return;
+      }
+    }
+
+    // Compile least-chosen candidates into an array
+    let minVotes = Math.min(...activeCandidates.map(i => votes[i]));
+    let lowestCandidates = activeCandidates.filter(i => votes[i] === minVotes);
+
+    if (activeCandidates.length === lowestCandidates.length) {
+      // All remaining candidates are tied
+      console.log(`Final tie between candidates: ${lowestCandidates.map(i => i + 1).join(" & ")}`);
+      return;
+    }
+
+    // Eliminate all candidates with the fewest votes
+    activeCandidates = activeCandidates.filter(i => !lowestCandidates.includes(i));
+    console.log(`Eliminating candidates ${lowestCandidates.map(i => i + 1).join(", ")} with ${minVotes} vote(s)\n`);
+  }
+
+  // If this line is reached, only one candidate remains
+  console.log(`Candidate ${activeCandidates[0] + 1} wins by default.`);
+```
+Using a while loop, I continuously tally up the votes before selecting and removing any and all candidates with the least number of votes. I also make sure to check for majority vote and ties to determine the winner(s).
