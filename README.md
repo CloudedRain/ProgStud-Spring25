@@ -265,4 +265,20 @@ Instead use Array.from for a single line.\
   // If this line is reached, only one candidate remains
   console.log(`Candidate ${activeCandidates[0] + 1} wins by default.`);
 ```
-Using a while loop, I continuously tally up the votes before selecting and removing any and all candidates with the least number of votes. I also make sure to check for majority vote and ties to determine the winner(s).
+Using a while loop, I continuously tally up the votes before selecting and removing any and all candidates with the least number of votes. I also make sure to check for majority vote and ties to determine the winner(s).\
+\
+--\
+\
+Helper function to assist with RCV.
+```
+  // Helper function to find the first active candidate in a row
+  firstActiveChoice: function(row, activeCandidates) {
+    for (let i = 0; i < row.length; i++) {
+      if (activeCandidates.includes(i) && row[i] === 1) {
+        return i;
+      }
+    }
+    return -1; // No active candidate found
+  }
+```
+
