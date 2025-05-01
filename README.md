@@ -17,7 +17,7 @@ Spring 2025
 **4/28-4/29 (2 classes)** - Design questionare to collect real-world data\
 **4/30-5/1 (2 classes)** - Release my survey to begin receiving responses\
 \
-**Week of 5/5** - Add start/end detection for rows and columns while data trickles in\
+**Week of 5/5** - Add start/end detection for rows and columns while data trickles in ✔️\
 **Week of 5/12** - Polish RCV macro and add faulty-data handling\
 \
 **5/21-5/22 (2 classes)** - Cut off data collection and start using my JavaScript macro\
