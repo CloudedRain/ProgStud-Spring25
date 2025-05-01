@@ -281,4 +281,41 @@ Helper function to assist with RCV.
     return -1; // No active candidate found
   }
 ```
+\
+--\
+\
+Added a primative system to automatically find the range of cells in which the data is contained.
+```
+  // Get data range dynamically
+  const range = sheet.getDataRange();
+  const data = range.getValues();
 
+  const startRow = range.getRow();
+  const startCol = range.getColumn() - 1; // convert to 0-based
+  const rows = range.getNumRows();
+  const cols = range.getNumColumns();
+```
+I did this by directly pulling all the data from the sheet, which excludes blank rows and columns. Once the data is inside an array I no longer need a startRow or startCol.
+\
+--\
+\
+Improved my range detection system and made it sort of "smart" by adding a filter for where it starts.
+```
+  // Get all data from the sheet
+  const allData = sheet.getDataRange().getValues();
+  if (allData.length < 2) {
+    console.log("Not enough data to calculate.");
+    return;
+  }
+
+  const headers = allData[0];
+
+  // Find the first non-empty header column (assume rankings start here)
+  const startCol = headers.findIndex(h => typeof h === 'string' && h.trim() !== "" && h.trim() !== "Timestamp");
+  const cols = headers.length - startCol;
+
+  // Slice out just the vote data (ignoring header row and columns before startCol)
+  const voteData = allData.slice(1).map(row => row.slice(startCol, startCol + cols));
+  const rows = voteData.length;
+```
+Here you can see I make sure the data is larger than 1 so that there's something to calculate. Then I search for the first column that starts with neither a blank cell or the string "Timestamp" (google forms generates this column when exporting to a spreadsheet).
