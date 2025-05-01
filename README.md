@@ -1,4 +1,4 @@
-# Programing Studio Journal
+# Programming Studio Journal
 Kjeld Nelson\
 Spring 2025
 ## Monday 1/27/25
