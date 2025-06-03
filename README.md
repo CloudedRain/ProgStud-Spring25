@@ -325,3 +325,109 @@ The next step to improve this would be doing the same thing for the end column w
 - Throughtly test algorithm to make sure it is redistributing votes and comparing a candidates current votes with the initial maximum
 - Improve data range detection to check for continuous blocks of data: have thourough algorithms for finding start/end row/column
 - Share my survey ASAP to let it collect votes while I make progress
+
+## Tuesday 5/5/25
+Fixed RCV logic. The algorithm now eliminates candidates and properly distributes the votes, taking advantage of instant run-off.
+```
+while (true) {
+    let votes = Array(cols).fill(0);
+    let totalVotes = 0;
+
+    for (const ballot of ballots) {
+      const choice = ballot.find(c => activeCandidates.includes(c));
+      if (choice !== undefined) {
+        votes[choice]++;
+        totalVotes++;
+      }
+    }
+
+    console.log(`Round ${round}:`);
+    activeCandidates.forEach(i => {
+      console.log(`${candidateNames[i]}: ${votes[i]} votes`);
+    });
+
+    // Output round header
+    const roundHeaderCell = sheet.getRange(1, outputCol + round);
+    roundHeaderCell.setValue(`Round ${round}`);
+
+    // Find eliminated and possible winner
+    const minVotes = Math.min(...activeCandidates.map(i => votes[i]));
+    const toEliminate = activeCandidates.filter(i => votes[i] === minVotes);
+
+    let winnerIndex = -1;
+    for (const i of activeCandidates) {
+      if (votes[i] > totalVotes / 2) {
+        winnerIndex = i;
+        break;
+      }
+    }
+
+    // Output vote counts and apply color
+    for (const i of activeCandidates) {
+      const row = i + 2;
+      const cell = sheet.getRange(row, outputCol + round);
+      cell.setValue(votes[i]);
+
+      if (i === winnerIndex) {
+        cell.setBackground('#c6efce'); // green
+      } else if (toEliminate.includes(i)) {
+        cell.setBackground('#ffc7ce'); // red
+      } else {
+        cell.setBackground(null); // clear
+      }
+    }
+
+    if (winnerIndex !== -1) {
+      console.log(`${candidateNames[winnerIndex]} wins with majority (${votes[winnerIndex]}/${totalVotes})`);
+      sheet.getRange(1, outputCol + round + 1).setValue(`Winner: ${candidateNames[winnerIndex]}`);
+      return;
+    }
+
+    if (toEliminate.length === activeCandidates.length) {
+      console.log(`Final tie between candidates: ${toEliminate.map(i => candidateNames[i]).join(" & ")}`);
+      sheet.getRange(1, outputCol + round + 1).setValue(`Tie: ${toEliminate.map(i => candidateNames[i]).join(" & ")}`);
+      return;
+    }
+
+    console.log(`Eliminating: ${toEliminate.map(i => candidateNames[i]).join(", ")} with ${minVotes} votes\n`);
+    activeCandidates = activeCandidates.filter(i => !toEliminate.includes(i));
+    round++;
+  }
+}
+```
+
+## Tuesday 5/12/25
+Added faulty data handling by detecting a skipping over rows with duplicate choices.
+```
+let ballots = [];
+  for (let r = 0; r < voteRows.length; r++) {
+    const row = voteRows[r].slice(startCol, startCol + cols);
+
+    // Check for duplicate rankings
+    const ranksSeen = new Set();
+    let faulty = false;
+    for (const val of row) {
+      if (typeof val === 'number') {
+        if (ranksSeen.has(val)) {
+          faulty = true;
+          break;
+        }
+        ranksSeen.add(val);
+      }
+    }
+
+    if (faulty) {
+      console.log(`Skipping row ${r + 2} due to duplicate rankings: [${row}]`);
+      continue;
+    }
+
+    const sorted = row
+      .map((rank, i) => ({ candidate: i, rank }))
+      .filter(cell => typeof cell.rank === 'number' && !isNaN(cell.rank))
+      .sort((a, b) => a.rank - b.rank)
+      .map(cell => cell.candidate);
+
+    ballots.push(sorted);
+  }
+```
+
