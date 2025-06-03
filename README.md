@@ -21,7 +21,7 @@ Spring 2025
 **Week of 5/12** - Polish RCV macro and add faulty-data handling ✔️\
 \
 **5/21-5/22 (2 classes)** - Cut off data collection and start using my JavaScript macro ✔️\
-**5/27-5/29 (3 classes)** - Compile and publish data findings ✔️
+**5/27-5/29 (3 classes)** - Compile and publish data findings 
 
 ## Monday 2/10/25
 - [Applying Ranked Choice Voting](https://www.rankedvote.co/guides/applying-ranked-choice-voting/how-to-calculate-ranked-choice-voting-with-google-forms-and-google-sheets)
