@@ -14,14 +14,14 @@ Spring 2025
 **Week of 4/7** - Optimise algorithm by pulling data directly into an array and performing array-based calculations ✔️\
 **Week of 4/21 (April Break)** - Catch up on lost time and finally add ranked choice functionality to algorithm ✔️\
 \
-**4/28-4/29 (2 classes)** - Design questionare to collect real-world data\
-**4/30-5/1 (2 classes)** - Release my survey to begin receiving responses\
+**4/28-4/29 (2 classes)** - Design questionare to collect real-world data ✔️\
+**4/30-5/1 (2 classes)** - Release my survey to begin receiving responses ✔️\
 \
 **Week of 5/5** - Add start/end detection for rows and columns while data trickles in ✔️\
-**Week of 5/12** - Polish RCV macro and add faulty-data handling\
+**Week of 5/12** - Polish RCV macro and add faulty-data handling ✔️\
 \
-**5/21-5/22 (2 classes)** - Cut off data collection and start using my JavaScript macro\
-**5/27-5/29 (3 classes)** - Compile and publish data findings
+**5/21-5/22 (2 classes)** - Cut off data collection and start using my JavaScript macro ✔️\
+**5/27-5/29 (3 classes)** - Compile and publish data findings ✔️
 
 ## Monday 2/10/25
 - [Applying Ranked Choice Voting](https://www.rankedvote.co/guides/applying-ranked-choice-voting/how-to-calculate-ranked-choice-voting-with-google-forms-and-google-sheets)
