@@ -431,3 +431,6 @@ let ballots = [];
   }
 ```
 
+## Wednesday 5/27/25
+Added informative output for each round color coded based on who was eliminated and who won.
+![First Choice Results](https://github.com/CloudedRain/ProgStud-Spring25/blob/main/Journal%20Images/color_coded_output.png)
