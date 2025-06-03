@@ -398,6 +398,7 @@ while (true) {
 
 ## Tuesday 5/12/25
 Added faulty data handling by detecting a skipping over rows with duplicate choices.
+![Faulty Data Handling](https://github.com/CloudedRain/ProgStud-Spring25/blob/main/Journal%20Images/faulty_data_handling.png)
 ```
 let ballots = [];
   for (let r = 0; r < voteRows.length; r++) {
@@ -433,4 +434,4 @@ let ballots = [];
 
 ## Wednesday 5/27/25
 Added informative output for each round color coded based on who was eliminated and who won.
-![First Choice Results](https://github.com/CloudedRain/ProgStud-Spring25/blob/main/Journal%20Images/color_coded_results.png)
+![Color Coded Output](https://github.com/CloudedRain/ProgStud-Spring25/blob/main/Journal%20Images/color_coded_results.png)
